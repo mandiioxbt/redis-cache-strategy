@@ -1,17 +1,16 @@
 # Redis Cache Strategy
 
-Redis caching strategies: write-through, cache-aside, read-through.
+Redis caching strategies: write-through, cache-aside, read-through with stampede prevention.
 
 ## Strategies
 - Cache-aside (lazy loading)
-- Write-through (consistent)
-- Write-behind (async)
+- Write-through (strong consistency)
+- Write-behind (async, high throughput)
 - Read-through (transparent)
 
 ## Features
-- Cache warming
 - Stampede prevention (probabilistic early expiration)
-- Multi-tier caching (L1 local + L2 Redis)
+- Multi-tier: L1 local + L2 Redis
+- Cache warming on startup
 
-## License
-MIT
+## License: MIT
